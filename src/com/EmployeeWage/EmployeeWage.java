@@ -4,29 +4,26 @@ public class EmployeeWage {
     public static void main(String args [])
     {
 
-        System.out.println("Welcome to Employee Wage Computation Program ");
+        System.out.println("Welcome to Emplyoee Wage Computation Program");
 
 
-        int Emp_Hrs=0;
-        int Emp_Rate_Per_Hrs=20;
-        int Per_Day_Salary=0;
-        int Full_Time=1;
-
-        int Result=(int)Math.floor(Math.random()*10)%2;
-        System.out.println("Result is :-"+Result);
-
-        if(Result == Full_Time)
-        {
-            Emp_Hrs=8;
+        int isPresent = 1;
+        int wagePerHour = 20;
+        int noOfWorkingHours = 8;
+        int partTimeHours = 4;
+        int checkAttendance =(int)Math.floor((Math.random()*10)%3);
+        System.out.println(checkAttendance);
+        if(checkAttendance == 1) {
+            System.out.println("Emplyoee is present");
+            System.out.println("Emplyoee Daily wage is" + wagePerHour * noOfWorkingHours);
         }
-        else
-        {
-            Per_Day_Salary=0;
+        else if(checkAttendance == 0) {
+            System.out.println("Emplyoee is absent");
         }
-        Per_Day_Salary = (Emp_Hrs*Emp_Rate_Per_Hrs);
-        System.out.println("Employee per Day Salary is :-"+Per_Day_Salary);
-
-
+        else {
+            System.out.println("Part Time");
+            System.out.println("Emplyoee Part Time wage is" + wagePerHour * partTimeHours);
+        }
 
     }
 }
